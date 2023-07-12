@@ -79,7 +79,7 @@ def test_python_object(example_namedlist, example_dict, example_log):
         bench_iteration=1,
         scriptdir=None,
     )
-    assert o.log_fmt_shell(stdout=False, stderr=True) == "2> test.log"
+    assert o.log_fmt_shell(stdout=False, stderr=True) == " 2> test.log"
 
 
 def test_r_object(example_namedlist, example_dict, example_list):
