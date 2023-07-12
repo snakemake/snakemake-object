@@ -36,7 +36,7 @@ def example_list():
     return [1, 2, 3, None, pd.Series([1, 2, 3])]
 
 
-def test_bash_named_list_one_named_one_str(self):
+def test_bash_named_list_one_named_one_str():
     """InputFiles is a subclass of snakemake.io.NamedInput
     ierate over input and store each with the integer index - i.e 0, 1, 2
     then use input.items() to iterate over the named files and store them as named also
@@ -51,7 +51,7 @@ def test_bash_named_list_one_named_one_str(self):
     assert actual == expected
 
 
-def test_bash_named_list_named_is_list(self):
+def test_bash_named_list_named_is_list():
     """Named lists that are lists of files become a space-separated string as you
     can't nest arrays in bash"""
     named_list = InputFiles(["test1.in", ["test2.in", "named.in"]])
