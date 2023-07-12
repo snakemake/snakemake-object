@@ -1,0 +1,23 @@
+[tool.poetry]
+authors = ["Johannes Köster <johannes.koester@uni-due.de>"]
+description = "Language agnostic encoding of Snakemake job information as 'Snakemake objects' into Snakemake script preambles."
+name = "snakemake-object"
+packages = [{include = "snakemake_object"}]
+readme = "README.md"
+version = "1.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+coverage = {extras = ["toml"], version = "^6.3.1"}
+flake8 = "^4.0.1"
+flake8-bugbear = "^22.1.11"
+pandas = "*"
+pytest = "^7.0"
+snakemake = {git = "https://github.com/snakemake/snakemake.git", branch = "feat/decouple-pickling"}
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
